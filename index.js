@@ -1,3 +1,5 @@
+
+
 /*  const Caroline = {
      name: "Caroline",
      dob: 2004,
@@ -43,7 +45,7 @@ Christian.dob = 2003; */
 } */
 
 
-
+/*
 
 const presidents = [
     { name: "Donald Trump", terms: 1, party: "R" },
@@ -62,40 +64,28 @@ const presidents = [
    
   //Challenge Questionss
   //1) Filter all presidents, leaving only the Democratic ones
- /*const democrat = presidents.filter(president => president.party === "D");
+ const democrat = presidents.filter(president => president.party === "D");
 
-  console.log(democrat);
-*/
   //2)Filter all presidents to leave only one term Republican presidents HINT use If statement
-  
- /* const republican = presidents.slice(0, 1)
-  console.log(republican)
-  
-  const republicanTwo = presidents.slice(4, 5)
-  console.log(republicanTwo)
-  
-  const republicanThree = presidents.slice(7, 8)
-  console.log(republicanThree)
-*/
+
+const oneTermRep = presidents.filter(function(pres){
+  if(pres.terms === 1 && pres.party === "R"){
+    return true;
+  }
+})
+
   //3) return only the last three presidents
   /*
   console.log(presidents[0]);
   console.log(presidents[1]);
   console.log(presidents[2]);
 */
+/*const reverse = presidents.reverse().slice(presidents.length - 3);
 
   //4) log all dems who served 2 terms. HINT use chain filter, filter and slice
-  /*
-
-const pres = presidents.slice(1, 2)
-console.log(pres)
-
-const presTwo = presidents.slice(3, 4)
-console.log(presTwo)
-
-const presThree = presidents.slice(11, 12)
-console.log(presThree)
-*/
+   const Dems2 = presidents
+   .filter((president) => president.party === "D")
+   .filter((el) => el.terms === 2);
   
   //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"  
 /*
@@ -106,3 +96,52 @@ else{
     alert("LBJ was one and done")
 }
 */
+
+
+//const headerClass = document.querySelector("#Idheader")
+//const items = document.querySelectorAll(".list-item")
+//const itemArr = Array.from(items);
+//headerClass.textContent = "test";
+
+/* const headerClass = document.querySelector("#Idheader");
+/* const toggle = document.querySelector(".toggle");
+toggle.addEventListener("click", function(){
+  headerClass.classList.toggle("Karen");
+}); */
+//headerClass.classList.add("Karen");
+//headerClass.classList.remove("Karen");
+
+/*
+ const background = document.querySelector(".background");
+ const changeBtn = document.querySelector(".button");
+ const headerTwo = document.querySelector(".header-two");
+
+ changeBtn.addEventListener("click", function(){
+  if(background.style.backgroundColor !== "rgb(255, 0, 0)") {
+    background.style.backgroundColor = "rgb(255, 0, 0)";
+    headerTwo.textContent = "RED";
+  } else {
+    background.style.backgroundColor = "rgb(0, 0, 255)";
+    headerTwo.textContent = "BLUE";
+  }
+ });
+
+*/
+
+
+ ////challenge use const = R, const = B, const = G to create button with random backgroun color, use math.random and math.floor
+ const background = document.querySelector(".background");
+ const changeBtn = document.querySelector(".button");
+ const headerTwo = document.querySelector(".header-two");
+
+ changeBtn.addEventListener("click", function(){
+    const R = Math.floor(Math.random() * 256);
+    const G = Math.floor(Math.random() * 256);
+    const B = Math.floor(Math.random() * 256);
+    const bgColor = "rgb(" + R + "," + G + "," + B + ")";
+    headerTwo.textContent = "BACKGROUND COLOR";
+ console.log(bgColor);
+  
+    document.body.style.background = bgColor;
+    }
+ )
